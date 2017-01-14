@@ -1,52 +1,90 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
       <meta charset="utf-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
       <link href="css/styles.css" rel="stylesheet" type="text/css" />
       <link href="css/tour.css" rel="stylesheet" type="text/css" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
       <title>Accessible Frog</title>
   </head>
 
   <body>
-    <div class="main-nav">
+    <nav class="main-nav" role="navigation">
       <ul class="nav">
-        <li class="name"><a href="index.html">Accessible Frog</a></li>
-        <li><a href="#">Tour</a></li>
-        <li><a href="survey.html">Survey</a></li>
+        <li class="name" aria-hidden="true"><a href="index.html" role="link">Accessible Frog</a></li>
+        <li aria-hidden="true"><a href="#" role="link">Tour</a></li>
+        <li aria-hidden="true"><a href="survey.html" role="link">Survey</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <header>
+    <header role="banner">
+      <h1 class="name">Accessible Frog</h1>
+      <h2 class="tagline">we make awesome music</h2>
     </header>
 
-    <main >
-      <div class="card">
+    <main>
+      <div class="card" role="article">
         <div class="flex">
-        <!-- The following images are decorative for this project. -->
-        <!-- Please see the project instructions for information on how to handle these. -->
-          <img class="pick" src= "img/guitar_pick.png" alt="This is a guitar pick">
-          <p class= "heading">Tour Dates</p>
-          <img class="pick" src= "img/guitar_pick.png" alt="This is a guitar pick also">
-          <pre>
-                Date                             Venue                             Location
-                Mar 10 - 12                 The Warfield                  San Francisco, CA
-                Mar 20 - 23                 Pepsi Center                  Denver, CO
-                Apr 2 - 4                      Beacon Theatre             New York City, NY
-                Apr 10                         Paramount Theatre      Seattle, WA
-          </pre>
+
+            <img class="pick" src="img/guitar_pick.png" alt="">
+            <h1 id="tour-heading" class="heading">Tour Dates</h1>
+            <img class="pick" src="img/guitar_pick.png" alt="">
+
+          <table>
+            <caption id="tour-dates" class="heading">Tour Dates</caption>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Venue</th>
+              <th scope="col">Location</th>
+            </tr>
+            <tr>
+              <th scope="row">Mar 10 - 12</th>
+              <td>The Warfield </td>
+              <td>San Francisco, CA</td>
+            </tr>
+            <tr>
+              <th scope="row">Mar 20 - 23</th>
+              <td>Pepsi Center </td>
+              <td>Denver, CO</td>
+            </tr>
+            <tr>
+              <th scope="row">Apr 2 - 4</th>
+              <td>Beacon Theatre</td>
+              <td>New York City, NY</td>
+            </tr>
+            <tr>
+              <th scope="row">Apr 10</th>
+              <td>Paramount Theatre</td>
+              <td>Seattle, WA</td>
+            </tr>
+          </table>
         </div>
       </div>
     </main>
-    
+
     <footer>
-      <ul>
-        <li><a href="#" class="social twitter"><img src= "img/twitter-32.png"></a></li>
-        <li><a href="#" class="social youtube"><img src= "img/youtube-32.png"></a></li>
-        <li><a href="#" class="social spotify"><img src= "img/spotify-32.png"></a></li>
-      </ul>
-      <p class="copyright">Copyright 2015, Accessible Frog</p>
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a href="#" class="social twitter" role="link" aria-hidden="true">
+              <img src="img/twitter-32.png" alt="Twitter icon">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social youtube" role="link" aria-hidden="true">
+              <img src="img/youtube-32.png" alt="Youtube icon">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social spotify" role="link" aria-hidden="true">
+              <img src="img/spotify-32.png" alt="Spotify icon">
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="copyright" role="contentinfo">Copyright 2015, Accessible Frog</p>
     </footer>
   </body>
 </html>
