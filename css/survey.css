@@ -1,145 +1,123 @@
 /* Survey page styles */
 
-/*
-.photo{
-  width: 60%;
-  padding: 10px;
-}
-*/
+
+
 
 form {
-  margin: 0 auto;
-  text-align: left;
-  display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+    display: inline-block;
 }
 
-.container{
-  text-align: center;
-  width: 100%;
+.container {
+    text-align: center;
+    width: 100%;
 }
 
 .survey {
-  margin: auto 0;
+    margin: auto 0;
 }
 
 .favorites {
-  border: none;
-  margin: auto 0;
+    border: none;
+    margin: auto 0;
 }
 
-
-.favorites p,
-#albums,
-label[for="albums"],
-label[for="fav-song-text"] {
-  display: block;
+.favorites p, #albums, label[for="albums"], label[for="fav-song-text"] {
+    display: block;
 }
 
 .favorites p {
-  margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-.favorites select,
+.favorites select, .favorites textarea {
+    outline: none;
+}
+
 .favorites textarea {
-  outline: none;
+    height: 3em;
 }
 
-.favorites textarea {
-  height: 3em;
+.favorites select:focus, .favorites textarea:focus {
+    border: 3px solid #baffbb;
+    border-radius: 2px;
+    box-shadow: 10px 10px 25px #000;
 }
 
-.favorites select:focus,
-.favorites textarea:focus {
-  border: 3px solid #f9d2da;
-  border-radius: 2px;
+input[type="radio"]:checked+label {
+    color: #baffbb;
 }
 
-input[type="radio"]:checked + label {
-  color: #f9d2da;
+label[for="albums"], label[for="fav-song-text"] {
+    margin: 0.5em 0;
 }
 
-label[for="albums"],
-label[for="fav-song-text"] {
-  margin: 0.5em 0;
-}
-
-.newsletter label,
-.newsletter input {
-  display: inline-block;
+.newsletter label, .newsletter input {
+    display: inline-block;
 }
 
 .newsletter label {
-  width: 40%;
-  text-align: right;
-  margin-right: 1%;
+    width: 40%;
+    text-align: right;
+    margin-right: 1%;
 }
 
 .newsletter input {
-  width: 45%;
-  height: 1.75em;
-  margin-right: 4%;
-  margin-top: 1.5em;
-  outline: none;
+    width: 45%;
+    height: 1.75em;
+    margin-right: 4%;
+    margin-top: 1.5em;
+    outline: none;
 }
 
 .newsletter input:focus {
-  border: 3px solid #f9d2da;
-  border-radius: 2px;
+    border: 3px solid #baffbb;
+    border-radius: 2px;
+    box-shadow: 10px 10px 25px #000;
 }
 
-.favorites legend,
-.newsletter legend {
-  display: none;
+.favorites legend, .newsletter legend {
+    display: none;
 }
 
 .signup {
-  border: none;
-  padding: 0;
+    border: none;
+    padding: 0;
 }
 
 #signup-button {
-  display: block;
-  width: 30%;
-  height: 2em;
-  margin-left: auto;
-  margin-right: 13%;
-  margin-top: 1.5em;
-  outline: none;
-  background-color: white;
-  border: none;
-  border-radius: 3px;
-  color: #3A6355;
+    display: block;
+    width: 30%;
+    height: 2em;
+    margin-left: auto;
+    margin-right: 13%;
+    margin-top: 1.5em;
+    outline: none;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    color: #3A6355;
 }
 
 #signup-button:focus {
-  border: 3px solid #f9d2da;
-  border-radius: 2px;
+    border: 3px solid #baffbb;
+    border-radius: 2px;
+    box-shadow: 10px 10px 25px #000;
 }
+
 
 /* Styles for aria hints */
 
-
 #favs-info {
-  font-size: 0.75em;
-  line-height: 1.2em;
-  text-align: left;
+    font-size: 0.75em;
+    line-height: 1.2em;
+    text-align: left;
 }
 
 #signup-info {
-  font-size: 0.75em;
-  line-height: 1.2em;
-  text-align: right;
-  margin-right: 13%;
+    font-size: 0.75em;
+    line-height: 1.2em;
+    text-align: right;
+    margin-right: 13%;
 }
-
-
-
-
-
-/* Styles for larger screens
-@media screen and (min-width: 840px) {
-  .photo{
-    width: 40%;
-  }
-}
-*/
